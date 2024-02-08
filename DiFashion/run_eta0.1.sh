@@ -1,1 +1,0 @@
-nohup accelerate launch --config_file config.yaml train.py --use_ema --use_ema_fashion --enable_xformers_memory_efficient_attention --mixed_precision fp16 --learning_rate 1e-5 --eta 0.1 --snr_gamma 5.0 --resume_from_checkpoint latest > ./log_eta0.1_gamma5.0_lr1e-5_ema_fp16_xformers.txt 2>&1 &
