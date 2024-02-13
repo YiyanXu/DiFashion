@@ -32,5 +32,6 @@ sh run_eta0.1.sh
 2. Put the 'checkpoints' folder into the current folder.
 3. Run inf4eval.py
 ```
+cd ./DiFashion
 sh run_inf4eval.sh
 ```
