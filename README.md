@@ -179,7 +179,7 @@ For item images of [Polyvore-U](https://github.com/lzcn/Fashion-Hash-Net),
     ```
 
 ### Training
-Please configure correct paths of all data in `train.py` and set appropriate gpu id in `config.yaml`. When running this code for the first time, ensure that you set the argument '--data_processed' to False in `train.py`, which will initiate the processing of the data into a suitable format.
+Please configure correct paths of all data in `train.py` and set appropriate gpu id in `config.yaml`.
 ```
 cd ./DiFashion
 sh run_eta0.1.sh
