@@ -2,10 +2,15 @@
 This is the pytorch implementation of our paper:
 > Diffusion Models for Generative Outfit Recommendation
 
-![Examples for FITB task.](./figures/fitb_examples.png "Examples of generated images (enclosed in small
-black squares within each outfit) for the PFITB task")
+Examples of generated images (enclosed in small black squares within each outfit) for the PFITB task.
+![Examples for FITB task.](./figures/fitb_examples.png)
 
-![Examples for GOR task.](./figures/gor_examples.png "Examples of generated outfits for the GOR task")
+Examples of generated outfits for the GOR task.
+![Examples for GOR task.](./figures/gor_examples.png)
+
+## DiFashion Overview
+An overview of DiFashion: it gradually corrupts outfit images with Gaussian noise in the forward process, followed by a parallel conditional denoising process to reconstruct these images. The denoising process is guided by three conditions: category prompt, mutual condition, and history condition.
+![DiFashion Overview](./figures/difashion_overview.png)
 
 ## Environment
 - Anaconda 3
@@ -21,9 +26,6 @@ black squares within each outfit) for the PFITB task")
 - xformers 0.0.22
 - pytorch-fid 0.3.0
 - lpips 0.1.4
-
-## DiFashion Overview
-![DiFashion Overview](./figures/difashion_overview.png "An overview of DiFashion: it gradually corrupts outfit images with Gaussian noise in the forward process, followed by a parallel conditional denoising process to reconstruct these images. The denoising process is guided by three conditions: category prompt, mutual condition, and history condition.")
 
 ## Usage
 ### Dataset
