@@ -102,6 +102,20 @@ def extract_cnn_features(args, img_paths, device, num_workers):
     cnn_feats = np.array(cnn_feats)
     return cnn_feats
 
+def process_hist_embs(history, clip_feats):
+    hist_embeds = {}
+    for uid in history:
+        if uid not in hist_embeds:
+            hist_embeds[uid] = {}
+        for cate in history[uid]:
+            iids = history[uid][cate]
+            hist_img_embs = clip_feats[iids]
+            hist_embeds[uid][cate] = hist_img_embs.mean(dim=0)
+    
+    hist_embeds["null"] = clip_feats[0]
+
+    return hist_embeds
+
 def main():
     args = parser.parse_args()
     set_random_seed(args.seed)
@@ -118,6 +132,7 @@ def main():
     img_paths = np.load(os.path.join(args.data_path, "all_item_image_paths.npy"), allow_pickle=True)
     max_iid = len(img_paths)
 
+    # extract clip embeddings of all images
     cnn_feat_path = os.path.join(args.data_path, "cnn_features_clip.npy")
     if not os.path.exists(cnn_feat_path):
         print("Extract cnn features of fashion images...")
@@ -127,8 +142,28 @@ def main():
     else:
         cnn_feats = np.load(cnn_feat_path, allow_pickle=True)  # [img_num, 2048]
         print(f"Successfully load cnn features of fashion images from {cnn_feat_path}")
-    cnn_feats = torch.tensor(cnn_feats).to(device)
+    cnn_feats = torch.tensor(cnn_feats)
     print(f"cnn features shape: {cnn_feats.shape}")
+
+    train_history = np.load(os.path.join(data_path, "train_history.npy"), allow_pickle=True).item()
+    valid_history = np.load(os.path.join(data_path, "valid_history.npy"), allow_pickle=True).item()
+    test_history = np.load(os.path.join(data_path, "test_history.npy"), allow_pickle=True).item()
+
+    save_path = os.path.join(args.data_path, "processed")
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+    
+    train_hist_embs = process_hist_embs(train_history, cnn_feats)
+    np.save(os.path.join(save_path, "train_history_clipembs.npy"), np.array(train_hist_embs))
+    print(f"Successfully save train_histroy_clipembs.npy to {save_path}.")
+
+    valid_hist_embs = process_hist_embs(valid_history, cnn_feats)
+    np.save(os.path.join(save_path, "valid_history_clipembs.npy"), np.array(valid_hist_embs))
+    print(f"Successfully save valid_histroy_clipembs.npy to {save_path}.")
+
+    test_hist_embs = process_hist_embs(test_history, cnn_feats)
+    np.save(os.path.join(save_path, "test_history_clipembs.npy"), np.array(test_hist_embs))
+    print(f"Successfully save test_histroy_clipembs.npy to {save_path}.")
 
 if __name__ == '__main__':
     main()
