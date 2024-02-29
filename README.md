@@ -202,6 +202,3 @@ sh run_inf4eval.sh
 cd ./Evaluation
 sh run_eval_fitb.sh ifashion DiFashion all test log 3
 ```
-
-## Questionnaire Examples
-
