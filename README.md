@@ -5,7 +5,6 @@ This is the pytorch implementation of our paper:
 ## Generated Examples
 - Generated images (enclosed in small black squares within each outfit) for the PFITB task.
 ![Examples for FITB task.](./figures/fitb_examples.png)
-
 - Generated outfits for the GOR task.
 ![Examples for GOR task.](./figures/gor_examples.png)
 
