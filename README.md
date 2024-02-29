@@ -2,10 +2,11 @@
 This is the pytorch implementation of our paper:
 > Diffusion Models for Generative Outfit Recommendation
 
-Examples of generated images (enclosed in small black squares within each outfit) for the PFITB task.
+## Examples
+- Examples of generated images (enclosed in small black squares within each outfit) for the PFITB task.
 ![Examples for FITB task.](./figures/fitb_examples.png)
 
-Examples of generated outfits for the GOR task.
+- Examples of generated outfits for the GOR task.
 ![Examples for GOR task.](./figures/gor_examples.png)
 
 ## DiFashion Overview
