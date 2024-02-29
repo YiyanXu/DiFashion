@@ -100,7 +100,7 @@ The experimental data are in './datasets' folder, including iFashion and Polyvor
     - **`cnn_features_clip.npy`:** extracted clip image embeddings of all the images arranged according to item ids. You can find relevant code in '/Evaluation/extract_hist_embs.py'. 
 
 For item images of [iFashion](https://github.com/wenyuer/POG),
-1. Download item information `item_info.npy` from [waiting for update]() with the format:
+1. Download item information `item_info.npy` from [here](https://drive.google.com/file/d/14PGCiPgSZ95FEdsv4Iii6kcj6MAD8k0V/view?usp=drive_link) with the format:
     ```python
     {
         iid1:{
