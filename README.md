@@ -89,7 +89,7 @@ The experimental data are in './datasets' folder, including iFashion and Polyvor
     {0:'skirt', 1:"women's canva shoe", ...}
     ```
 - **`cate_iid_dict.npy` & `iid_cate_dict.npy`:** the correspondance between category id and item id.
-- To acquire additional data, kindly retrieve the necessary files from from [iFashion-cloud]() and [Polyvore-cloud]() and put them into corresponding data path, respectively. Each source comprises two files and one folder.
+- To acquire additional data, kindly retrieve the necessary files from from [iFashion-cloud](https://drive.google.com/file/d/1VOCEEo_r_HZrgkWpFzXidsrDHVyha5YI/view?usp=drive_link) and [Polyvore-cloud]() and put them into corresponding data path, respectively. Each source comprises two files and one folder.
     
     - **`/processed`:** data processed for training, validation, test and evaluation. If you didn't download the files in the folder, 
     
