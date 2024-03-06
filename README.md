@@ -89,7 +89,7 @@ The experimental data are in './datasets' folder, including iFashion and Polyvor
     {0:'skirt', 1:"women's canva shoe", ...}
     ```
 - **`cate_iid_dict.npy` & `iid_cate_dict.npy`:** the correspondance between category id and item id.
-- To acquire additional data, kindly retrieve the necessary files from from [iFashion-cloud](https://drive.google.com/file/d/1VOCEEo_r_HZrgkWpFzXidsrDHVyha5YI/view?usp=drive_link) and [Polyvore-cloud]() and put them into corresponding data path, respectively. Each source comprises two files and one folder.
+- To acquire additional data, kindly retrieve the necessary files from from [iFashion-cloud](https://drive.google.com/file/d/1VOCEEo_r_HZrgkWpFzXidsrDHVyha5YI/view?usp=drive_link) and [Polyvore-cloud](https://drive.google.com/file/d/1-QkF04nnU9D8v4tMliBql5GUkqwmS8wt/view?usp=drive_link) and put them into corresponding data path, respectively. Each source comprises two files and one folder.
     
     - **`/processed`:** data processed for training, validation, test and evaluation. If you didn't download the files in the folder, 
     
@@ -186,7 +186,7 @@ sh run_eta0.1.sh
 ```
 
 ### Inference
-1. Download the checkpoint released by us from [waiting_for_update]().
+1. Download the checkpoint released by us from [here](https://drive.google.com/file/d/1KPSvPX8Bq5cOpupUowdfC3SiNAiI2fiI/view?usp=drive_link).
 2. Put the checkpoint into appropriate folder.
 3. Configure correct paths of all data in `inf4eval.py` and set appropriate gpu id in `config.yaml`.
 4. Run inf4eval.py
@@ -196,7 +196,7 @@ sh run_inf4eval.sh
 ```
 
 ### Evaluation
-1. Download finetuned inception from [waiting_for_update] and put it into '/Evaluation/finetuned_inception/'.
+1. Download finetuned inception from [here](https://drive.google.com/file/d/1O48_C-ZXqQpIZgUa0Br7ieErFqW3rwAM/view?usp=drive_link) and put it into '/Evaluation/finetuned_inception/'.
 2. Run the evaluation code through the `.sh` files. For example, to evaluate the performance of DiFashion on iFashion dataset within the Fill-In-The-Blank task, executing the corresponding evaluation code `evaluate_fitb.py` using the provided `run_eval_fitb.sh`.
 ```
 cd ./Evaluation
