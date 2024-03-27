@@ -1,6 +1,6 @@
 # Diffusion Models for Generative Outfit Recommendation
-This is the pytorch implementation of our paper:
-> Diffusion Models for Generative Outfit Recommendation
+This is the pytorch implementation of our paper at SIGIR 2024:
+> [Diffusion Models for Generative Outfit Recommendation](https://arxiv.org/abs/2402.17279)
 
 ## DiFashion Overview
 An overview of DiFashion: it gradually corrupts outfit images with Gaussian noise in the forward process, followed by a parallel conditional denoising process to reconstruct these images. The denoising process is guided by three conditions: category prompt, mutual condition, and history condition.
