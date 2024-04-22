@@ -169,7 +169,7 @@ For item images of [iFashion](https://github.com/wenyuer/POG),
     ```
 
 For item images of [Polyvore-U](https://github.com/lzcn/Fashion-Hash-Net),
-1. Download all the images from [here](https://stduestceducn-my.sharepoint.com/personal/zhilu_std_uestc_edu_cn/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2Fzhilu%5Fstd%5Fuestc%5Fedu%5Fcn%2FDocuments%2Fpolyvore%2Fimages).
+1. Download all the images from [here](https://stduestceducn-my.sharepoint.com/:f:/g/personal/zhilu_std_uestc_edu_cn/Er7BPeXpVc5Egl9sufLB7V0BdYVoXDj8PcHqgYe3ze2i-w).
 2. Unzip the file `291x291.tar.gz` and put it into an appropriate path '/path/to/291x291'.
 3. Add an empty image into the image folder.
     ```python
