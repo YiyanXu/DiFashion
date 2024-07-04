@@ -91,7 +91,7 @@ The experimental data are in './datasets' folder, including iFashion and Polyvor
     {0:'skirt', 1:"women's canva shoe", ...}
     ```
 - **`cate_iid_dict.npy` & `iid_cate_dict.npy`:** the correspondance between category id and item id.
-- To acquire additional data, kindly retrieve the necessary files from from [iFashion-cloud](https://drive.google.com/file/d/1VOCEEo_r_HZrgkWpFzXidsrDHVyha5YI/view?usp=drive_link) and [Polyvore-cloud](https://drive.google.com/file/d/1-QkF04nnU9D8v4tMliBql5GUkqwmS8wt/view?usp=drive_link) and put them into corresponding data path, respectively. Each source comprises two files and one folder.
+- To acquire additional data, kindly retrieve the necessary files from [iFashion-cloud](https://rec.ustc.edu.cn/share/e7951350-39e4-11ef-8b91-a57c3db4bf71) and [Polyvore-cloud](https://rec.ustc.edu.cn/share/fda7ea40-39e4-11ef-809f-e70c02651ecc) and put them into corresponding data path, respectively. Each source comprises two files and one folder.
     
     - **`/processed`:** data processed for training, validation, test and evaluation. If you didn't download the files in the folder, 
     
@@ -102,7 +102,7 @@ The experimental data are in './datasets' folder, including iFashion and Polyvor
     - **`cnn_features_clip.npy`:** extracted clip image embeddings of all the images arranged according to item ids. You can find relevant code in '/Evaluation/extract_hist_embs.py'. 
 
 For item images of [iFashion](https://github.com/wenyuer/POG),
-1. Download item information `item_info.npy` from [here](https://drive.google.com/file/d/14PGCiPgSZ95FEdsv4Iii6kcj6MAD8k0V/view?usp=drive_link) with the format:
+1. Download item information `item_info.npy` from [here](https://rec.ustc.edu.cn/share/16f20610-39e5-11ef-a746-bd86c2f2b14f) with the format:
     ```python
     {
         iid1:{
@@ -188,7 +188,7 @@ sh run_eta0.1.sh
 ```
 
 ### Inference
-1. Download the checkpoint released by us from [here](https://drive.google.com/file/d/1KPSvPX8Bq5cOpupUowdfC3SiNAiI2fiI/view?usp=drive_link).
+1. Download the checkpoint released by us from [here](https://rec.ustc.edu.cn/share/406b7620-39e5-11ef-acb8-11350f441074).
 2. Put the checkpoint into appropriate folder.
 3. Configure correct paths of all data in `inf4eval.py` and set appropriate gpu id in `config.yaml`.
 4. Run inf4eval.py
@@ -198,8 +198,8 @@ sh run_inf4eval.sh
 ```
 
 ### Evaluation
-1. Download finetuned inception from [here](https://drive.google.com/file/d/1O48_C-ZXqQpIZgUa0Br7ieErFqW3rwAM/view?usp=drive_link) and put it into '/Evaluation/finetuned_inception/'.
-2. Run the evaluation code through the `.sh` files. For example, to evaluate the performance of DiFashion on iFashion dataset within the Fill-In-The-Blank task, executing the corresponding evaluation code `evaluate_fitb.py` using the provided `run_eval_fitb.sh`.
+1. Download finetuned inception from [here](https://rec.ustc.edu.cn/share/5f232b80-39e5-11ef-979a-bd764da62664) and put it into '/Evaluation/finetuned_inception/'.
+2. Run the evaluation code through the `.sh` files. For example, to evaluate the performance of DiFashion on iFashion dataset within the Fill-In-The-Blank task, execute the corresponding evaluation code `evaluate_fitb.py` using the provided `run_eval_fitb.sh`.
 ```
 cd ./Evaluation
 sh run_eval_fitb.sh ifashion DiFashion all test log 3
