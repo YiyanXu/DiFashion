@@ -668,7 +668,7 @@ def main():
     logger.info(f"scale list: {scale_list}")
 
     if args.mode == "test":
-        save_path = os.path.join(args.output_dir, "eval-test-git")
+        save_path = os.path.join(args.output_dir, "eval-test")
     else:
         save_path = os.path.join(args.output_dir, "eval")
     if not os.path.exists(save_path):
