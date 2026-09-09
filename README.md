@@ -188,7 +188,7 @@ sh run_eta0.1.sh
 ```
 
 ### Inference
-1. Download the checkpoint released by us from [here](https://pan.ustc.edu.cn/share/index/c2a19300c0e34e42bd19).
+1. Download the checkpoint released by us from [here](https://pan.ustc.edu.cn/share/index/aa79f16b249f4fcda69a).
 2. Put the checkpoint into appropriate folder.
 3. Configure correct paths of all data in `inf4eval.py` and set appropriate gpu id in `config.yaml`.
 4. Run inf4eval.py
@@ -198,7 +198,7 @@ sh run_inf4eval.sh
 ```
 
 ### Evaluation
-1. Download finetuned inception from [here](https://pan.ustc.edu.cn/share/index/c2a19300c0e34e42bd19) and put it into '/Evaluation/finetuned_inception/'.
+1. Download finetuned inception from [here](https://pan.ustc.edu.cn/share/index/aa79f16b249f4fcda69a) and put it into '/Evaluation/finetuned_inception/'.
 2. Run the evaluation code through the `.sh` files. For example, to evaluate the performance of DiFashion on iFashion dataset within the Fill-In-The-Blank task, execute the corresponding evaluation code `evaluate_fitb.py` using the provided `run_eval_fitb.sh`.
 ```
 cd ./Evaluation
